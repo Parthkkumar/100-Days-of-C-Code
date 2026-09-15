@@ -4,7 +4,10 @@ int main() {
     float firstNumber, secondNumber;
 
     printf("Enter two numbers: ");
-    scanf("%f %f", &firstNumber, &secondNumber);
+    if (scanf("%f %f", &firstNumber, &secondNumber) != 2) {
+        printf("Invalid input. Please enter two numbers.\n");
+        return 1;
+    }
 
     printf("Sum: %.2f\n", firstNumber + secondNumber);
     printf("Difference: %.2f\n", firstNumber - secondNumber);
